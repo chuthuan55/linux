@@ -1,0 +1,3 @@
+ARG HAPROXY_VERSION
+
+FROM devops.baokim.vn:5000/haproxy:${HAPROXY_VERSION}

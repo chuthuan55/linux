@@ -1,0 +1,24 @@
+version: "2.2.11"
+services:
+  haproxy:
+    image: haproxy:2.2.11
+    container_name: haproxy-${HOSTNAME}
+    hostname: haproxy
+    restart: unless-stopped
+    env_file: 
+        - .env
+    volumes:
+        - ./haproxy/conf.d/haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg:ro
+        - ./haproxy/ssl:/etc/haproxy/ssl:ro
+        - /etc/localtime:/etc/localtime:ro
+    networks:
+      - lemp_network
+    ports:
+    - "8040:8004"
+    - "8050:8005"
+
+
+networks:
+  lemp_network:
+    external: true
+

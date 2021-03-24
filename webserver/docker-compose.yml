@@ -1,0 +1,75 @@
+version: "3.8"
+services:
+  php56:
+    image: huuduoc/php:${PHP56_VERSION}
+    container_name: php56
+    hostname: php56
+    restart: unless-stopped
+    env_file: 
+      - .env
+    environment:
+      - "TZ=Asia/Ho_Chi_Minh"
+    volumes:
+      - /var/www:/var/www:rw
+    expose:
+      - "9000"
+    networks:
+      - lemp_network
+
+  php74:
+    image: huuduoc/php:${PHP74_VERSION}
+    container_name: php74
+    hostname: php74
+    restart: unless-stopped
+    env_file: 
+      - .env
+    environment:
+      - "TZ=Asia/Ho_Chi_Minh"
+    volumes:
+      - /var/www:/var/www:rw
+    expose:
+      - "9000"
+    networks:
+      - lemp_network
+
+  nginx:
+    image: nginx:${NGINX_VERSION}
+    container_name: nginx
+    hostname: nginx
+    restart: unless-stopped
+    env_file: 
+      - .env
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - ./nginx/conf.d/:/etc/nginx/conf.d/:ro
+      - /var/www:/var/www:rw
+    expose:
+      - "443"
+      - "80"
+      - "8004"
+      - "8005"
+    networks:
+      - lemp_network
+
+  mysql:
+    image: mysql:latest
+    container_name: mysql
+    hostname: mysql
+    restart: unless-stopped
+    command: --default-authentication-plugin=mysql_native_password
+    environment:
+      MYSQL_ROOT_PASSWORD: example
+      MYSQL_DATABASE: database
+      MYSQL_USER: user
+      MYSQL_PASSWORD: pass
+    env_file: 
+      - .env
+    ports:
+      - "3306:3306"
+    networks:
+      - lemp_network     
+
+networks:
+  lemp_network:
+    external: true
+
