@@ -1,6 +1,9 @@
 # git command
-  git remote add origin https://github.com/chuthuan55/linux.git
+  git init
+  git add README.md
+  git commit -m "ok"
   git branch -M main
+  git remote add origin https://github.com/chuthuan55/linux.git
   git push -u origin main
 
 # git config
