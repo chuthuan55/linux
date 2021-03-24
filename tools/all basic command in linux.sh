@@ -20,3 +20,4 @@
 # ifconfig
 # ping
 # hostname -I
+
