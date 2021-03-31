@@ -312,3 +312,10 @@ yum install -y nano
 # fn_crontab
 # set auto job
 crontab
+
+# fn_dd
+# to know I/O speed
+dd if=./latest.tar.gz of=/tmp/latest.tar.gz
+30756+1 records in
+30756+1 records out
+15747536 bytes (16 MB) copied, 0.35811 s, 44.0 MB/s
