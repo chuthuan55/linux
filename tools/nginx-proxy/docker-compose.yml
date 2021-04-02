@@ -19,8 +19,8 @@ services:
       - ./nginx/conf.d/:/etc/nginx/conf.d/:ro
       - ./nginx/ssl/certs/:/etc/ssl/certs/:ro
     ports:
-      - "80:8080"
-      - "443:8443"
+      - "80:8108"
+      - "443:8434"
     networks:
       - prod_network
 networks:
