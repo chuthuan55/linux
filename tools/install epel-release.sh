@@ -1,1 +1,1 @@
-sudo yum install epel-release
+yum install epel-release
