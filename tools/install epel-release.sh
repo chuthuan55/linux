@@ -1,1 +1,1 @@
-yum install epel-release
+yum -y install epel-release
