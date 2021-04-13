@@ -10,7 +10,7 @@ sudo systemctl status sshd
 sudo systemctl restart sshd
 
 
-netstat -nlp | grep 22
+ss -nlp | grep 22
 tcp        0      0 0.0.0.0:22            0.0.0.0:*               LISTEN      -
 tcp6       0      0 :::22                 :::*                    LISTEN      -
 
