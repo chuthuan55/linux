@@ -298,7 +298,7 @@ EOF
 # systemctl stop firewalld
   # turn off firewall
 
-# setenforce 0
+# disable SElinux
 sentenforce 0
 
 # 
