@@ -109,7 +109,7 @@ systemctl restart php-fpm
 
 
 #Install mariadb
-sudo yum install mariadb-server
+sudo yum -y install mariadb-server
 
 sudo systemctl start mariadb
 sudo systemctl enable mariadb
