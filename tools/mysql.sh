@@ -1,3 +1,8 @@
+## create user
+  CREATE USER 'abc'@'%' IDENTIFIED BY '1';
+  GRANT ALL ON .* TO 'abc'@'%';
+  FLUSH PRIVILEGES;
+
 mysql -u root -p
 > show databases;
 > use databases;
