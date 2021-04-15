@@ -7,8 +7,9 @@
   # search:
     /
   # edit:
-    i
+    SHIFT + P + G  #xuống dòng cuối
+    i              #insert
     text
     esc
-    :wq
+    :wq!
     
