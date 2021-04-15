@@ -11,4 +11,4 @@
   curl domain
 
 # traceroute
-      
+  traceroute domain
