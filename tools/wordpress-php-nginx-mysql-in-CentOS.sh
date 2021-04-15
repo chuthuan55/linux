@@ -7,11 +7,11 @@
   yum install -y http://rpms.remirepo.net/enterprise/remi-release-7.rpm
 
 #Install NGINX and PHP7.4
-  sudo yum install epel-release yum-utils
-  sudo yum install http://rpms.remirepo.net/enterprise/remi-release-7.rpm
-  sudo yum-config-manager --enable remi-php74
-  sudo yum install -y nginx
-  sudo yum -y install php-fpm php-mysqlnd
+yum install epel-release yum-utils
+yum install http://rpms.remirepo.net/enterprise/remi-release-7.rpm
+yum-config-manager --enable remi-php74
+yum install -y nginx
+yum -y install php-fpm php-mysqlnd
 
 #Restart httpd and php-fpm
 systemctl start php-fpm
