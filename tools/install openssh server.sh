@@ -14,3 +14,9 @@ ss -nlp | grep 22
 tcp        0      0 0.0.0.0:22            0.0.0.0:*               LISTEN      -
 tcp6       0      0 :::22                 :::*                    LISTEN      -
 
+
+# ssh timeout
+# Timeout value = ClientAliveInterval * ClientAliveCountMax
+vi /etc/ssh/sshd_config
+ClientAliveInterval 1200
+ClientAliveCountMax 3

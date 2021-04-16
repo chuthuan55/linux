@@ -37,4 +37,8 @@ mysql -u root -p
   # show user
     SELECT user,host FROM mysql.user; 
 
-  # 
+  # 'ORDER BY'
+    SELECT column_name FROM table_name
+    ORDER BY column_name [ASC;DESC];
+
+  #  

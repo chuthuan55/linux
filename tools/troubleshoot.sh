@@ -3,6 +3,7 @@
 
 # telnet
   telnet ipaddress port
+  telnet domain port
 
 # ss
   ss -nlp | grep port
