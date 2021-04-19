@@ -1,8 +1,9 @@
 # ping
+  ping domain
   ping ipaddress
 
 # telnet
-  telnet ipaddress port
+  telnet ipaddress port 
   telnet domain port
 
 # ss
