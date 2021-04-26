@@ -299,23 +299,27 @@ EOF
   # turn off firewall
 
 # disable SElinux
-sentenforce 0
+  sentenforce 0
 
 # 
-firewall-cmd --add-port=80/tcp --permanent
-firewall-cmd --add-port=8080/tcp --permanent
-firewall-cmd --reload
+  firewall-cmd --add-port=80/tcp --permanent
+  firewall-cmd --add-port=8080/tcp --permanent
+  firewall-cmd --reload
 
 # fn_yum
-yum install -y nano
+  yum install -y nano
 
 # fn_crontab
 # set auto job
-crontab
+  crontab
 
 # fn_dd
 # to know I/O speed
-dd if=./latest.tar.gz of=/tmp/latest.tar.gz
-30756+1 records in
-30756+1 records out
-15747536 bytes (16 MB) copied, 0.35811 s, 44.0 MB/s
+  dd if=./latest.tar.gz of=/tmp/latest.tar.gz
+  30756+1 records in
+  30756+1 records out
+  15747536 bytes (16 MB) copied, 0.35811 s, 44.0 MB/s
+
+# ssh-timeout
+   vi /etc/ssh/sshd_config
+   /ClientAliveInterval
