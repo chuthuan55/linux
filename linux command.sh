@@ -323,3 +323,9 @@ EOF
 # ssh-timeout
    vi /etc/ssh/sshd_config
    /ClientAliveInterval
+
+# Để chạy php artisan ... thì vào container php5.6 hoặc php7.3 7.4 tùy theo project đó chạy gì
+  docker ps #check php container name
+  docker exec -it php74-esxi01-prod01 bash
+  cd /var/www/pincode/admin_9602/
+  php artisan migrate
