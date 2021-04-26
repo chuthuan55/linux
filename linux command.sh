@@ -327,7 +327,7 @@ EOF
     press esc
     :wq! 
 # fn_dd
-# to know I/O speed
+# to know I/O (Input/Output) speed
   dd if=./latest.tar.gz of=/tmp/latest.tar.gz
   30756+1 records in
   30756+1 records out
