@@ -1,11 +1,14 @@
+## create database
+  create database database_name;
+
 ## create user
   CREATE USER 'abc'@'%' IDENTIFIED BY '1';
   GRANT ALL ON .* TO 'abc'@'%';
   FLUSH PRIVILEGES;
 
-mysql -u root -p
+mysql -u root -p #đăng nhập mysql
 > show databases;
-> use databases;
+> use databases_name;
 > show tables;
 > command
 ## command
