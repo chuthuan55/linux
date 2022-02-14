@@ -10,6 +10,8 @@ sudo systemctl disable nginx
 sudo systemctl start nginx
 sudo systemctl status nginx
 
+#fix file host to create "thuan.com"
+
 # 
 sudo mkdir -p /var/www/thuan.com/html
 sudo chmod -R 755 /var/www/thuan.com
